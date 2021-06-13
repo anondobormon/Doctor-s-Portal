@@ -1,0 +1,52 @@
+
+
+.service-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.service12{
+    margin: auto;
+    width: 1150px;
+}
+
+
+.service-card{
+    transition: 0.5s all ease-in-out;
+}
+.service-card:hover {
+    margin-top: 15px;
+}
+.ser-card{
+    border: 2px solid #d3d3d3;
+    border-radius: 4px;
+}
+
+.icon-cont{
+    margin: auto;
+    height: 90px;
+    width: 90px;
+    border: 2px solid #396cf0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    
+}
+.service-card:hover .icon-cont{
+    background: #396cf0;
+}
+.icon-cont .ser-icon{
+    font-size: 30px;
+    color: #396cf0;
+}
+.service-card:hover .ser-icon{
+    color: #fff;
+}

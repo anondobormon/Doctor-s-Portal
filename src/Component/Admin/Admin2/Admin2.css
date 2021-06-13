@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.container1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.container2{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+    /* border: 1px solid black; */
+}
+.nav-active{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+    /* border: 1px solid black; */
+}
+.nav-active ul,
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+.nav-active ul li,
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-active ul li:hover,
+.navigation ul li:hover{
+    background: #03a9f4;
+}
+.nav-active ul li:nth-child(1),
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+.nav-active ul li:nth-child(1):hover,
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+.nav-active ul li .s-nav-link,
+.navigation ul li .s-nav-link{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+.nav-active ul li .s-nav-link .icon,
+.navigation ul li .s-nav-link .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.nav-active ul li .s-nav-link .title{
+    display: none;
+    
+}
+.navigation ul li .s-nav-link .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.main{
+    position: relative;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: 0.5s;
+}
+.main-active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    width: 100%;
+    background: #fff;
+    padding-right: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* background: #03a9f4; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.toggle span{
+    font-size: 30px;
+}
+/* .toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+.adm-user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.adm-user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardBox{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+.Bcard{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.5s ease;
+}
+
+.Bcard:hover{
+    margin-top: 10px;
+}
+.card-icon{
+    /* background: #7fa5fd; */
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #3867d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+    /* text-align: center; */
+}
+.Bcard:hover .card-icon{
+    background: #3867d6;
+}
+.Bcard:hover span{
+    color: white;
+
+}
+.Bcard span{
+    font-size: 30px;
+    color: #3867d6;
+}
+.Bcard .count-up{
+    width: 180px;
+    height: 70px;
+    /* border: 1px solid black; */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* ALL PATIENTS */
+
+.patients-table{
+    width: 70%;
+    border: 1px solid black;
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    display: grid;
+}
+.patients-table table tr th{
+    padding-bottom: 20px;
+}
+.patients-table table tr{
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.patients-table table tbody tr:hover{
+    background: #03a9f4;
+}
+.patients-table table tbody tr td{
+    padding: 10px;
+}

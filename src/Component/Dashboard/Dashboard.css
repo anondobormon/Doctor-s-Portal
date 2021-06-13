@@ -1,0 +1,53 @@
+
+
+.dashboard{
+    box-sizing: border-box;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.user-dashboard-slider{
+    width: 300px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin: 20px;
+}
+.user-info{
+    width: 950px;
+    /* border: 1px solid black; */
+    margin: 20px;
+}
+
+
+
+/* ---DashboardDetails--- */
+.dashboard-info{
+    
+}
+.info-route ul{
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;   
+    border: 1px solid lightgray; 
+}
+.info-route ul button{
+    
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ---suer Appointment--- */
+
+.user-table{
+    border: 1px solid gray;
+    padding: 20px;
+}
+.user-table-info{
+    border: 1ps solid black;
+    
+}

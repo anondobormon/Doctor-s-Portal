@@ -1,0 +1,18 @@
+
+
+.departmentCard{
+    width: 1150px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid blueviolet;
+}
+.department{
+    display: flex;
+    flex-wrap: wrap;
+}
+.department .department-img{
+    width: 700px;
+}
+.department .department-img img{
+    width: 100%;
+}
