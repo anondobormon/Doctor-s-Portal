@@ -18,87 +18,92 @@ import AllPatients from "./AdminDashboard/Patients/AllPatients";
 const Admin = () => {
   const [toggleChange, setToggleChange] = useState("dashboard");
 
-  const toggle = (e) => {
-    console.log(e.target.name);
-    setToggleChange(e.target.name);
+  const toggle = (toggle) => {
+    console.log(toggle);
+    setToggleChange(toggle);
   };
+
+  const userImg = sessionStorage.getItem("avatar");
   return (
     <>
       <Navbar></Navbar>
       <div className="admin">
         <div className="admin-sidebar">
           <div className="sidebar-button">
+            <div className="admin-image">
+              <img src={userImg} alt="" />
+            </div>
             <ul>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faBars}
-                />
-                <button onClick={toggle} name="dashboard">
-                  Dashboard
+                <button onClick={() => toggle("dashboard")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faBars}
+                  />
+                  <span>Dashboard</span>
                 </button>
               </li>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faCalendar}
-                />
-                <button onClick={toggle} name="appointment">
-                  Appointment
+                <button onClick={() => toggle("appointment")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faCalendar}
+                  />
+                  <span>Appointment</span>
                 </button>
               </li>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faUserMd}
-                />
-                <button onClick={toggle} name="doctors">
-                  Doctors
+                <button onClick={() => toggle("doctors")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faUserMd}
+                  />
+                  <span>Doctors</span>
                 </button>
               </li>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faUser}
-                />
-                <button onClick={toggle} name="patients">
-                  Patients
+                <button onClick={() => toggle("patients")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faUser}
+                  />
+                  <span>Patients</span>
                 </button>
               </li>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faComment}
-                />
-                <button onClick={toggle} name="reviews">
-                  Reviews
+                <button onClick={() => toggle("reviews")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faComment}
+                  />
+                  <span>Reviews</span>
                 </button>
               </li>
               <li>
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    marginLeft: "10px",
-                  }}
-                  icon={faBriefcase}
-                />
-                <button onClick={toggle} name="specialities">
-                  Specialities
+                <button onClick={() => toggle("specialities")}>
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      marginLeft: "10px",
+                    }}
+                    icon={faBriefcase}
+                  />
+                  <span>Specialities</span>
                 </button>
               </li>
             </ul>

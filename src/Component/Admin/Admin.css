@@ -1,50 +1,76 @@
 .admin {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
+  min-height: 93vh;
 }
 
 /* pc view */
 .admin-sidebar {
-  width: 300px;
+  width: 17%;
+  padding-top: 50px;
   background: #1dd1a1;
 }
-@media only screen and (max-width: 600px) {
+.all-details {
+  width: 83%;
+}
+.admin-sidebar .admin-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.admin-sidebar .admin-image img {
+  width: 100%;
+}
+@media only screen and (max-width: 688px) {
+  .admin-sidebar .admin-image {
+    display: none;
+  }
   .admin-sidebar {
-    width: 110px;
-    position: sticky;
-    overflow: hidden;
+    width: 60px;
+    padding-top: 50px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .all-details {
+    width: 83%;
+  }
+  .sidebar-button span {
+    display: none;
+  }
+
+  .sidebar-button ul li {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
   }
 }
 
+.sidebar-button span {
+  margin-left: 20px;
+}
 .sidebar-button ul {
-  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
 }
 .sidebar-button ul li {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
 }
-.sidebar-button ul li button {
-  margin-left: 15px;
-  display: block;
-  background: transparent;
-  font-size: 22px;
-  text-align: center;
-  border: none;
-  font-weight: 700;
-  padding: 5px 0;
-}
-.sidebar-button ul li:hover {
-  background: #10ac84;
-}
-/* Appoint section css */
-
-.all-details {
-  border: 1px solid black;
+.sidebar-button button {
+  padding: 10px;
   width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
 }
+
+/* Appoint section css */
 
 /* all apointment */
 

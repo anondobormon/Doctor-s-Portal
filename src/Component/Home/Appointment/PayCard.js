@@ -1,39 +1,38 @@
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 const PayCard = () => {
-    const stripe = useStripe();
-    const elements = useElements();
+  const stripe = useStripe();
+  const elements = useElements();
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    const handleSubmit = async (event) => {
+    if (!stripe || !elements) {
+      return;
+    }
 
-        event.preventDefault();
+    const cardElement = elements.getElement(CardElement);
 
-        if (!stripe || !elements) {
-            return;
-        }
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card: cardElement,
+    });
 
-        const cardElement = elements.getElement(CardElement);
+    if (error) {
+      console.log("[error]", error);
+    } else {
+      console.log("[PaymentMethod]", paymentMethod);
+    }
+  };
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
-            type: 'card',
-            card: cardElement,
-        });
-
-        if (error) {
-            console.log('[error]', error);
-        } else {
-            console.log('[PaymentMethod]', paymentMethod);
-        }
-    };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <CardElement />
-           <br /> <button type="submit" className='btn btn-primary' disabled={!stripe}>
-                Pay
-            </button>
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit}>
+      <CardElement />
+      <br />{" "}
+      <button type="submit" className="btn btn-primary" disabled={!stripe}>
+        Pay
+      </button>
+    </form>
+  );
 };
 export default PayCard;

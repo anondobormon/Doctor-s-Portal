@@ -28,27 +28,18 @@ const DashboardDoctor = () => {
   return (
     <div>
       <div className="dasDoctor">
-        <div
-          style={{
-            display: "scroll",
-            height: "500px",
-            width: "400px",
-            border: "1px solid black",
-            padding: "10px",
-            overflow: "scroll",
-          }}
-        >
+        <div className="doctorDash">
           {doctor.map((doctors) => (
             <div className="doctors">
               <div className="doctors-img">
                 <img src={doctors?.img} alt="" />
               </div>
               <div className="doctors-details">
-                <div>
+                <div className="doctor-name">
                   <h4>{doctors?.name}</h4>
                   <h6 style={{ color: "gray" }}>{doctors?.specialty}</h6>
                 </div>
-                <div>
+                <div id="doctor-modal">
                   {/* <!-- Button trigger modal --> */}
                   <button
                     type="button"

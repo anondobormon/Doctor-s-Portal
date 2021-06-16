@@ -1,0 +1,84 @@
+/* ----appointment-----start----- */
+
+.appointment {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.appointment-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  margin-bottom: 100px;
+  /* background: #396cf0; */
+}
+.appointment-img {
+  width: 35%;
+  height: 550px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.appointment-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.paycard {
+  width: 600px;
+  border: 1px solid black;
+}
+.appointment-form {
+  width: 65%;
+}
+.appointment-form input,
+select {
+  width: 300px;
+  padding: 20px;
+}
+.appointment-form input {
+  margin: 10px 20px;
+}
+.appointment-form select {
+  margin: 10px 20px;
+}
+.appointment-form textarea {
+  width: 640px;
+  height: 150px;
+  margin: 10px 20px;
+}
+.appointment-form button {
+  margin-left: 20px;
+}
+.appointment-form .modal-div {
+  width: 50%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  .appointment-box {
+    display: block;
+  }
+  .appointment-img {
+    width: 600px;
+    margin: auto;
+  }
+  .appointment-form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 688px) {
+  .appointment-box {
+    display: block;
+  }
+  .appointment-img {
+    width: 300px;
+  }
+  .appointment-form {
+    width: 100%;
+  }
+}

@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import img1 from "../../../Image/pexels-mart-production-7089632.jpg";
-
+import "./Appointment.css";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import PayCard from "./PayCard";
+import { Button, Modal, Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheck,
+  faCheckCircle,
+  faExclamationTriangle,
+} from "@fortawesome/free-solid-svg-icons";
 
 const stripePromise = loadStripe(
   "pk_test_51IeO3RETJzLGeV9qQr5oCAop0kcjFm5Kek2Pti8GxU3pmTeOMlDoipFSSkarVuILFNEhyghB54J9VBJ4Zp1pJWw800VOZEiPca"
@@ -14,6 +21,7 @@ const Appointment = () => {
   const { _id } = useParams();
   console.log(_id);
   const [doctorDetails, setDoctorDetails] = useState({});
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:5000/doctors")
@@ -54,9 +62,13 @@ const Appointment = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(eventData),
     }).then((res) => {
-      alert("Appointment Booked");
+      setModal(true);
+      console.log(modal);
       window.location.reload();
     });
+  };
+  const handleModal = () => {
+    setModal(false);
   };
   return (
     <div className="appointment">
@@ -66,6 +78,57 @@ const Appointment = () => {
         </div>
         <div className="appointment-form">
           <h1>Make an Appointment</h1>
+
+          <div>
+            <Modal show={modal}>
+              <Modal.Header style={{ fontSize: "25px", fontWeight: "700" }}>
+                Booking Status
+              </Modal.Header>
+              <Modal.Body>
+                <div
+                  style={{
+                    width: "200px",
+                    height: "200px",
+                    margin: "auto",
+                    padding: "10px",
+                    textAlign: "center",
+                  }}
+                  className="modal-div"
+                >
+                  <div
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      margin: "auto",
+                      marginTop: "10px",
+                      borderRadius: "50%",
+                      background: "#009432",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "0",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    <FontAwesomeIcon
+                      style={{
+                        fontSize: "35px",
+                        color: "white",
+                      }}
+                      icon={faCheck}
+                    />
+                  </div>
+                  <p>Booking Successful</p>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="success" onClick={handleModal}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+
           <input
             onBlur={handleBlur}
             type="text"

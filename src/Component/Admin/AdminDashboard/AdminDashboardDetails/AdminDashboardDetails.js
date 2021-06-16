@@ -17,12 +17,7 @@ const AdminDashboardDetails = () => {
         <div className="summery-row">
           <div className="summery">
             <div className="summery-icon" style={{ background: "#9957b8" }}>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "30px",
-                }}
-                icon={faUserFriends}
-              />
+              <FontAwesomeIcon className="das-icon" icon={faUserFriends} />
             </div>
             <div className="count">
               <CountUp style={{ color: "black" }} end={2500} duration={5} /> +
@@ -37,12 +32,7 @@ const AdminDashboardDetails = () => {
           </div>
           <div className="summery">
             <div className="summery-icon" style={{ background: "#ff4630" }}>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "30px",
-                }}
-                icon={faUserShield}
-              />
+              <FontAwesomeIcon className="das-icon" icon={faUserShield} />
             </div>
             <div className="count">
               <CountUp style={{ color: "black" }} end={2500} duration={5} /> +
@@ -57,12 +47,7 @@ const AdminDashboardDetails = () => {
           </div>
           <div className="summery">
             <div className="summery-icon" style={{ background: "#3c4fa2" }}>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "30px",
-                }}
-                icon={faCalendarCheck}
-              />
+              <FontAwesomeIcon className="das-icon" icon={faCalendarCheck} />
             </div>
             <div className="count">
               <CountUp style={{ color: "black" }} end={2500} duration={5} /> +
@@ -77,12 +62,7 @@ const AdminDashboardDetails = () => {
           </div>
           <div className="summery">
             <div className="summery-icon" style={{ background: "#1aa6ec" }}>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "30px",
-                }}
-                icon={faCommentDots}
-              />
+              <FontAwesomeIcon className="das-icon" icon={faCommentDots} />
             </div>
             <div className="count">
               <CountUp style={{ color: "black" }} end={2500} duration={5} /> +

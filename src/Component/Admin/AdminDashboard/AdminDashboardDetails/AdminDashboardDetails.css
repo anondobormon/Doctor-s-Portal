@@ -11,7 +11,7 @@
 .dashboard-container .summery {
   margin: 10px;
   border: 2px solid gainsboro;
-  width: 380px;
+  width: 350px;
   border-radius: 8px;
   padding: 5px;
   display: flex;
@@ -24,6 +24,7 @@
   font-size: 35px;
   font-weight: 600;
 }
+
 .summery .summery-icon {
   margin: 10px;
   height: 80px;
@@ -46,6 +47,14 @@
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
+}
+.doctorDash {
+  height: 500px;
+  width: 400px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: scroll;
 }
 .dasDoctor .doctors {
   padding: 5px;
@@ -72,4 +81,76 @@
 .doctors .doctors-details {
   display: flex;
   justify-content: space-between;
+}
+.das-icon {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 688px) {
+  .dashboard-container {
+    padding: 10px;
+  }
+  .summery-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-container .summery {
+    width: 250px;
+    height: 100px;
+  }
+  .dashboard-container .summery .count {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .das-icon {
+    font-size: 20px;
+  }
+
+  .summery .summery-icon {
+    height: 55px;
+    width: 55px;
+  }
+  .summery .count {
+    width: 150px;
+    text-align: center;
+  }
+
+  /* Dashboard doctor  */
+
+  .dasDoctor {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+  .dasDoctor .doctors {
+    margin: auto;
+  }
+  .dasDoctor .doctors:hover {
+    background: #d2dae2;
+  }
+  .doctors .doctors-img {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+  .doctors .doctors-img img {
+    width: 100%;
+  }
+  .doctors-details:nth-child(2) {
+    display: inline-block;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+  }
+  .doctors-details .doctor-name {
+    text-align: center;
+  }
+  #doctor-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
